@@ -1,6 +1,6 @@
 
 /* Import Premium Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* Reset and Base Styles */
 * {
@@ -16,7 +16,7 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.7;
+    line-height: 1.6;
     color: #1a1a1a;
     overflow-x: hidden;
     font-weight: 400;
@@ -108,7 +108,7 @@ p {
 }
 
 .navbar {
-    padding: 1.25rem 0;
+    padding: 1rem 0;
 }
 
 .nav-container {
@@ -123,7 +123,6 @@ p {
 .nav-logo .logo-link {
     display: flex;
     align-items: center;
-    gap: 1rem;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
@@ -133,17 +132,9 @@ p {
 }
 
 .logo {
-    height: 45px;
+    height: 60px;
     width: auto;
     transition: all 0.3s ease;
-}
-
-.logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    letter-spacing: -0.02em;
 }
 
 .nav-menu {
@@ -422,8 +413,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 80%, rgba(30, 74, 60, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 80%, rgba(30, 74, 60, 0.05) 0%, transparent 50%);
 }
 
 .about-content {
@@ -838,11 +828,12 @@ section {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
     gap: 3rem;
     margin-bottom: 3rem;
     position: relative;
     z-index: 1;
+    align-items: start;
 }
 
 .footer-section h4 {
@@ -875,26 +866,19 @@ section {
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
 .footer-logo-img {
-    height: 45px;
+    height: 60px;
     width: auto;
-}
-
-.footer-logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: white;
 }
 
 .footer-section > p {
     color: #cbd5e1;
     line-height: 1.7;
     margin-bottom: 2rem;
+    font-size: 1rem;
 }
 
 .social-links {
@@ -907,8 +891,8 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -923,7 +907,9 @@ section {
 }
 
 .social-icon {
-    font-size: 1.25rem;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 .footer-bottom {
@@ -948,7 +934,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.75rem;
     text-decoration: none;
     box-shadow: var(--shadow-xl);
     z-index: 1000;
@@ -960,6 +945,12 @@ section {
     transform: scale(1.1);
     background: #1EBE57;
     box-shadow: var(--shadow-2xl);
+}
+
+.whatsapp-icon {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
 }
 
 /* Premium Animations */
@@ -997,29 +988,6 @@ section {
     }
 }
 
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-/* Scroll Animations */
-.fade-in-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fade-in-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Enhanced Mobile Responsiveness */
 @media (max-width: 1024px) {
     .container {
@@ -1040,6 +1008,11 @@ section {
     
     .services-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 }
@@ -1081,6 +1054,7 @@ section {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
+        padding: 0 1rem;
     }
     
     .hero-carousel {
@@ -1091,13 +1065,15 @@ section {
     .hero-buttons {
         justify-content: center;
         gap: 1rem;
+        flex-direction: column;
+        align-items: center;
     }
     
     .btn {
         padding: 0.875rem 1.5rem;
         font-size: 1rem;
         width: 100%;
-        max-width: 200px;
+        max-width: 280px;
     }
     
     .about-content {
@@ -1170,9 +1146,13 @@ section {
     .whatsapp-float {
         width: 55px;
         height: 55px;
-        font-size: 1.5rem;
         bottom: 20px;
         right: 20px;
+    }
+    
+    .whatsapp-icon {
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -1185,12 +1165,15 @@ section {
         padding: 0 1rem;
     }
     
+    .logo {
+        height: 50px;
+    }
+    
     .hero {
         padding: 100px 0 60px;
     }
     
     .hero-container {
-        padding: 0 1rem;
         gap: 2rem;
     }
     
@@ -1207,17 +1190,6 @@ section {
     .hero-subtitle {
         font-size: 1rem;
         margin-bottom: 2rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .btn {
-        width: 100%;
-        max-width: none;
-        padding: 1rem;
     }
     
     .section-title {
@@ -1254,58 +1226,24 @@ section {
         padding: 3rem 0 1rem;
     }
     
-    .footer-content {
-        gap: 2rem;
+    .footer-logo-img {
+        height: 50px;
     }
     
     .whatsapp-float {
         width: 50px;
         height: 50px;
-        font-size: 1.25rem;
         bottom: 15px;
         right: 15px;
     }
     
+    .whatsapp-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
     section {
         padding: 60px 0;
-    }
-}
-
-/* High DPI Displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .logo,
-    .footer-logo-img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-    }
-}
-
-/* Print Styles */
-@media print {
-    .header,
-    .whatsapp-float,
-    .hero-buttons,
-    .social-links {
-        display: none;
-    }
-    
-    body {
-        font-size: 12pt;
-        line-height: 1.4;
-        color: black;
-    }
-    
-    .hero {
-        padding: 20px 0;
-    }
-    
-    section {
-        padding: 20px 0;
-        page-break-inside: avoid;
-    }
-    
-    .btn {
-        display: none;
     }
 }
 
@@ -1331,18 +1269,6 @@ select:focus,
     outline-offset: 2px;
 }
 
-/* Dark Mode Support (Future Enhancement) */
-@media (prefers-color-scheme: dark) {
-    .footer {
-        background: #0f172a;
-    }
-}
-
-/* Smooth Scroll Behavior */
-html {
-    scroll-behavior: smooth;
-}
-
 /* Image Loading Optimization */
 img {
     max-width: 100%;
@@ -1362,5 +1288,4 @@ img {
 .service-card,
 .gallery-item {
     backface-visibility: hidden;
-    perspective: 1000px;
 }
