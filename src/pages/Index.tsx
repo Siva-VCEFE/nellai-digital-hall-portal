@@ -10,22 +10,26 @@ const Index = () => {
 
   const heroImages = [
     {
-      url: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
-      title: "Modern Conference Hall"
+      url: "/lovable-uploads/ada55ee4-5db5-445b-890f-5f19e6a7cdb1.png",
+      title: "Professional Conference Setup"
     },
     {
-      url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
-      title: "Premium Digital Hall"
+      url: "/lovable-uploads/efde9524-931b-4cdb-b74d-94a6526a64a4.png",
+      title: "Modern Training Hall"
     },
     {
-      url: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
-      title: "Professional Equipment"
+      url: "/lovable-uploads/8a2c5b5c-96f1-418c-b41e-39daaec837e2.png",
+      title: "Executive Meeting Room"
     },
     {
-      url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
-      title: "Latest Technology"
+      url: "/lovable-uploads/1e6b4475-9175-4b47-9902-e7f365f3f870.png",
+      title: "Premium Conference Hall"
     }
   ];
+
+  const handleWhatsAppContact = () => {
+    window.open("https://wa.me/919944222744?text=Hello! I'm interested in your hall and equipment rental services.", "_blank");
+  };
 
   return (
     <div className="nellai-digital-hall">
@@ -35,7 +39,7 @@ const Index = () => {
           <div className="nav-container">
             <div className="nav-logo">
               <a href="#home" className="logo-link">
-                <img src="/lovable-uploads/de99f51a-0b2e-46e3-aba8-eac2d14313f6.png" alt="Nellai Digital Hall Logo" className="logo" />
+                <img src="/lovable-uploads/eb406ff7-b430-4263-b659-0fcb8150db93.png" alt="Nellai Digital Hall - Premium Event Solutions" className="logo" />
               </a>
             </div>
             <ul className="nav-menu">
@@ -59,10 +63,12 @@ const Index = () => {
         <div className="hero-container">
           <div className="hero-content">
             <h1 className="hero-title">Premium Digital Hall & Equipment Rental in Tirunelveli</h1>
-            <p className="hero-subtitle">Professional halls, projectors, laptops, and computers for your events, meetings, and conferences in Palayamkottai, Tirunelveli</p>
+            <p className="hero-subtitle">Professional conference halls, modern equipment, and expert event solutions for businesses, training institutes, and organizations in Palayamkottai, Tirunelveli</p>
             <div className="hero-buttons">
-              <a href="#services" className="btn btn-primary">Our Services</a>
-              <a href="https://wa.me/919944222744?text=Hello! I'm interested in your hall and equipment rental services." target="_blank" className="btn btn-secondary">WhatsApp Enquiry</a>
+              <a href="#services" className="btn btn-primary">Explore Our Services</a>
+              <button onClick={handleWhatsAppContact} className="btn btn-secondary">
+                WhatsApp Enquiry
+              </button>
             </div>
           </div>
           <div className="hero-carousel">
@@ -94,30 +100,30 @@ const Index = () => {
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">About Nellai Digital Hall</h2>
-            <p className="section-subtitle">Your trusted partner for premium event solutions in Tirunelveli</p>
+            <p className="section-subtitle">Your trusted partner for premium conference halls and professional event solutions in Tirunelveli</p>
           </div>
           <div className="about-content">
             <div className="about-text">
               <h3>Excellence in Event Solutions</h3>
-              <p>Located at Palayamkottai, Tirunelveli, Nellai Digital Hall has been serving the community with premium hall rental and equipment services. We specialize in providing modern, well-equipped digital halls perfect for conferences, meetings, seminars, and special events.</p>
-              <p>Our commitment to professionalism and quality has made us the preferred choice for businesses, educational institutions, and individuals looking for reliable event solutions in Tirunelveli and surrounding areas.</p>
+              <p>Located at 10K/4, Trivandrum Road, Palayamkottai, Tirunelveli, Nellai Digital Hall has been serving businesses, educational institutions, and organizations with premium conference hall rentals and modern equipment solutions.</p>
+              <p>We specialize in providing fully-equipped digital halls perfect for corporate meetings, training sessions, seminars, workshops, and professional events. Our commitment to quality and professional service has made us the preferred choice in Tirunelveli.</p>
               <div className="about-features">
                 <div className="feature">
-                  <h4>Modern Facilities</h4>
-                  <p>State-of-the-art digital halls with premium amenities</p>
+                  <h4>Modern Infrastructure</h4>
+                  <p>State-of-the-art conference halls with premium seating and professional setup</p>
                 </div>
                 <div className="feature">
-                  <h4>Professional Service</h4>
-                  <p>Dedicated support team for seamless event execution</p>
+                  <h4>Professional Support</h4>
+                  <p>Dedicated technical team for seamless event execution and equipment management</p>
                 </div>
                 <div className="feature">
                   <h4>Prime Location</h4>
-                  <p>Conveniently located in Palayamkottai, Tirunelveli with easy accessibility</p>
+                  <p>Conveniently located in Palayamkottai with easy accessibility and parking facilities</p>
                 </div>
               </div>
             </div>
             <div className="about-image">
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Modern conference hall in Tirunelveli" className="about-img" />
+              <img src="/lovable-uploads/ada55ee4-5db5-445b-890f-5f19e6a7cdb1.png" alt="Professional conference hall setup in Tirunelveli" className="about-img" />
             </div>
           </div>
         </div>
@@ -127,51 +133,51 @@ const Index = () => {
       <section id="services" className="services">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Our Premium Services</h2>
-            <p className="section-subtitle">Comprehensive rental solutions for all your event needs in Tirunelveli</p>
+            <h2 className="section-title">Our Professional Services</h2>
+            <p className="section-subtitle">Comprehensive event solutions and equipment rental services for all your business needs</p>
           </div>
           
-          {/* Hall Rental Services */}
+          {/* Conference Hall Services */}
           <div className="service-category">
-            <h3 className="category-title">Digital Hall Rental Services</h3>
+            <h3 className="category-title">Conference Hall Rental</h3>
             <div className="services-grid">
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Conference Hall Rental in Tirunelveli" />
+                  <img src="/lovable-uploads/ada55ee4-5db5-445b-890f-5f19e6a7cdb1.png" alt="Professional Conference Hall in Tirunelveli" />
                 </div>
-                <h4>Conference Hall</h4>
-                <p>Premium conference halls for corporate meetings and business events with modern audio-visual systems.</p>
+                <h4>Executive Conference Hall</h4>
+                <p>Premium conference halls with professional seating arrangements for corporate meetings and business presentations.</p>
                 <ul>
-                  <li>50-100 seating capacity</li>
-                  <li>Professional lighting</li>
-                  <li>Advanced sound systems</li>
-                  <li>Air conditioning</li>
+                  <li>50-80 seating capacity</li>
+                  <li>Professional lighting system</li>
+                  <li>Advanced audio equipment</li>
+                  <li>Air conditioning facility</li>
                 </ul>
               </div>
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Seminar Hall Rental in Tirunelveli" />
+                  <img src="/lovable-uploads/efde9524-931b-4cdb-b74d-94a6526a64a4.png" alt="Training Hall Rental in Tirunelveli" />
                 </div>
-                <h4>Seminar Hall</h4>
-                <p>Spacious seminar halls perfect for educational workshops, training sessions, and academic events.</p>
+                <h4>Training & Seminar Hall</h4>
+                <p>Spacious halls designed for training programs, workshops, and educational seminars with modern amenities.</p>
                 <ul>
-                  <li>100-200 seating capacity</li>
-                  <li>Digital projector setup</li>
-                  <li>Microphone systems</li>
-                  <li>Comfortable seating</li>
+                  <li>60-100 seating capacity</li>
+                  <li>Projector and screen setup</li>
+                  <li>Wireless microphone system</li>
+                  <li>Comfortable seating arrangement</li>
                 </ul>
               </div>
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Event Hall Rental in Tirunelveli" />
+                  <img src="/lovable-uploads/8a2c5b5c-96f1-418c-b41e-39daaec837e2.png" alt="Meeting Room Rental in Tirunelveli" />
                 </div>
-                <h4>Multi-Purpose Hall</h4>
-                <p>Versatile halls suitable for various events including cultural programs, celebrations, and community gatherings.</p>
+                <h4>Executive Meeting Room</h4>
+                <p>Intimate meeting spaces perfect for board meetings, interviews, and small group discussions.</p>
                 <ul>
-                  <li>200+ seating capacity</li>
-                  <li>Stage setup available</li>
-                  <li>Flexible arrangements</li>
-                  <li>Event coordination support</li>
+                  <li>20-30 seating capacity</li>
+                  <li>Conference table setup</li>
+                  <li>Professional ambiance</li>
+                  <li>Privacy and comfort assured</li>
                 </ul>
               </div>
             </div>
@@ -183,41 +189,41 @@ const Index = () => {
             <div className="services-grid">
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Projector Rental in Tirunelveli" />
+                  <img src="/lovable-uploads/1e6b4475-9175-4b47-9902-e7f365f3f870.png" alt="Projector and Audio Equipment Rental" />
                 </div>
-                <h4>HD & 4K Projectors</h4>
-                <p>High-quality projectors with crystal-clear display for presentations, training sessions, and entertainment.</p>
+                <h4>HD Projectors & Screens</h4>
+                <p>High-definition projectors with crystal-clear display for professional presentations and training sessions.</p>
                 <ul>
-                  <li>HD & 4K resolution</li>
-                  <li>Multiple connectivity options</li>
-                  <li>Portable & fixed installations</li>
+                  <li>HD & Full HD resolution</li>
+                  <li>Large projection screens</li>
+                  <li>Multiple input connectivity</li>
                   <li>Technical support included</li>
                 </ul>
               </div>
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Laptop Rental in Tirunelveli" />
+                  <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Laptop Rental Services in Tirunelveli" />
                 </div>
-                <h4>Latest Model Laptops</h4>
-                <p>Premium laptops for business presentations, training programs, and temporary office setups.</p>
+                <h4>Laptop & Computer Rental</h4>
+                <p>Latest model laptops and desktop computers for training programs and temporary office setups.</p>
                 <ul>
-                  <li>Latest models available</li>
+                  <li>Latest model laptops</li>
                   <li>Pre-configured software</li>
-                  <li>Various specifications</li>
+                  <li>Desktop workstations</li>
                   <li>Flexible rental periods</li>
                 </ul>
               </div>
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Computer Rental in Tirunelveli" />
+                  <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Audio Visual Equipment Rental" />
                 </div>
-                <h4>Desktop Computers</h4>
-                <p>Complete desktop setups for training centers, temporary offices, or events requiring multiple workstations.</p>
+                <h4>Audio Visual Equipment</h4>
+                <p>Complete audio-visual solutions including sound systems, microphones, and lighting for professional events.</p>
                 <ul>
-                  <li>Complete workstation setup</li>
-                  <li>Multiple configurations</li>
-                  <li>Bulk rental discounts</li>
-                  <li>Installation & maintenance</li>
+                  <li>Professional sound systems</li>
+                  <li>Wireless microphones</li>
+                  <li>Stage lighting equipment</li>
+                  <li>Technical operator support</li>
                 </ul>
               </div>
             </div>
@@ -225,45 +231,45 @@ const Index = () => {
 
           {/* Additional Services */}
           <div className="service-category">
-            <h3 className="category-title">Additional Services</h3>
+            <h3 className="category-title">Event Support Services</h3>
             <div className="services-grid">
-              <div className="service-card">
-                <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Audio Visual Equipment Rental" />
-                </div>
-                <h4>Audio Visual Equipment</h4>
-                <p>Complete AV solutions including sound systems, microphones, and lighting equipment for professional events.</p>
-                <ul>
-                  <li>Professional sound systems</li>
-                  <li>Wireless microphones</li>
-                  <li>LED lighting setup</li>
-                  <li>Technical operator support</li>
-                </ul>
-              </div>
               <div className="service-card">
                 <div className="service-icon">
                   <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Event Management Services" />
                 </div>
                 <h4>Event Coordination</h4>
-                <p>Professional event coordination services to ensure your events run smoothly from start to finish.</p>
+                <p>Professional event planning and coordination services to ensure your events run smoothly from start to finish.</p>
                 <ul>
-                  <li>Event planning support</li>
-                  <li>Setup & coordination</li>
+                  <li>Event planning consultation</li>
+                  <li>Setup and coordination</li>
                   <li>Technical assistance</li>
                   <li>On-site support team</li>
                 </ul>
               </div>
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Furniture Rental Services" />
+                  <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Furniture and Seating Arrangements" />
                 </div>
-                <h4>Furniture & Accessories</h4>
-                <p>Additional furniture and accessories to complement your event setup and enhance the overall experience.</p>
+                <h4>Furniture & Seating</h4>
+                <p>Premium seating arrangements and furniture to complement your event setup and enhance participant comfort.</p>
                 <ul>
                   <li>Premium seating options</li>
-                  <li>Tables & podiums</li>
-                  <li>Decorative accessories</li>
+                  <li>Conference tables</li>
+                  <li>Podiums and lecterns</li>
                   <li>Custom arrangements</li>
+                </ul>
+              </div>
+              <div className="service-card">
+                <div className="service-icon">
+                  <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Catering and Refreshment Services" />
+                </div>
+                <h4>Refreshment Services</h4>
+                <p>Professional catering and refreshment arrangements to keep your participants energized throughout the event.</p>
+                <ul>
+                  <li>Tea & coffee arrangements</li>
+                  <li>Lunch and snack catering</li>
+                  <li>Water and refreshments</li>
+                  <li>Customized meal plans</li>
                 </ul>
               </div>
             </div>
@@ -275,44 +281,32 @@ const Index = () => {
       <section id="gallery" className="gallery">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Gallery</h2>
-            <p className="section-subtitle">Glimpses of our premium facilities and successful events</p>
+            <h2 className="section-title">Our Facilities Gallery</h2>
+            <p className="section-subtitle">Take a look at our professional conference halls and successful events</p>
           </div>
           <div className="gallery-grid">
             <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Modern conference hall setup in Tirunelveli" />
+              <img src="/lovable-uploads/efde9524-931b-4cdb-b74d-94a6526a64a4.png" alt="Modern training hall setup in Nellai Digital Hall" />
               <div className="gallery-overlay">
-                <h4>Conference Hall Setup</h4>
+                <h4>Training Hall Setup</h4>
               </div>
             </div>
             <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Professional presentation setup in Palayamkottai" />
+              <img src="/lovable-uploads/ada55ee4-5db5-445b-890f-5f19e6a7cdb1.png" alt="Professional conference in progress" />
               <div className="gallery-overlay">
-                <h4>Presentation Setup</h4>
+                <h4>Conference in Progress</h4>
               </div>
             </div>
             <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="High-quality projector rental Tirunelveli" />
+              <img src="/lovable-uploads/8a2c5b5c-96f1-418c-b41e-39daaec837e2.png" alt="Executive meeting room arrangement" />
               <div className="gallery-overlay">
-                <h4>HD Projector</h4>
+                <h4>Executive Meeting Room</h4>
               </div>
             </div>
             <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Laptop rental for events in Tirunelveli" />
+              <img src="/lovable-uploads/1e6b4475-9175-4b47-9902-e7f365f3f870.png" alt="Premium conference hall with projector setup" />
               <div className="gallery-overlay">
-                <h4>Laptop Setup</h4>
-              </div>
-            </div>
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Corporate event hall in Tirunelveli" />
-              <div className="gallery-overlay">
-                <h4>Corporate Event</h4>
-              </div>
-            </div>
-            <div className="gallery-item">
-              <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Training session setup in Nellai Digital Hall" />
-              <div className="gallery-overlay">
-                <h4>Training Session</h4>
+                <h4>Premium Conference Hall</h4>
               </div>
             </div>
           </div>
@@ -324,58 +318,41 @@ const Index = () => {
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Contact Us</h2>
-            <p className="section-subtitle">Get in touch for bookings and enquiries</p>
+            <p className="section-subtitle">Get in touch for bookings and enquiries - We're here to help you plan your perfect event</p>
           </div>
           <div className="contact-content">
             <div className="contact-info">
               <h3>Get In Touch</h3>
-              <p>Ready to book our premium services? Contact us today for competitive pricing and personalized solutions.</p>
+              <p>Ready to book our premium conference halls and equipment? Contact us today for competitive pricing and personalized event solutions.</p>
               <div className="contact-item">
-                <h4>WhatsApp</h4>
+                <h4>WhatsApp & Phone</h4>
                 <p><a href="https://wa.me/919944222744?text=Hello! I'm interested in your hall and equipment rental services." target="_blank">+91 99442 22744</a></p>
               </div>
               <div className="contact-item">
-                <h4>Phone</h4>
-                <p><a href="tel:+919944222744">+91 99442 22744</a></p>
-              </div>
-              <div className="contact-item">
-                <h4>Address</h4>
+                <h4>Our Address</h4>
                 <p>Nellai Digital Hall<br />
                 10K/4, Trivandrum Road<br />
                 Palayamkottai, Tirunelveli - 627 002<br />
                 Tamil Nadu, India</p>
               </div>
+              <div className="contact-item">
+                <h4>Business Hours</h4>
+                <p>Monday to Sunday: 8:00 AM - 10:00 PM<br />
+                Available for bookings and site visits</p>
+              </div>
             </div>
             <div className="contact-form">
-              <h3>Send us a Message</h3>
-              <form className="enquiry-form">
-                <div className="form-group">
-                  <input type="text" name="name" placeholder="Your Name" required />
-                </div>
-                <div className="form-group">
-                  <input type="email" name="email" placeholder="Your Email" required />
-                </div>
-                <div className="form-group">
-                  <input type="tel" name="phone" placeholder="Your Phone Number" required />
-                </div>
-                <div className="form-group">
-                  <select name="service" required>
-                    <option value="">Select Service</option>
-                    <option value="hall-rental">Digital Hall Rental</option>
-                    <option value="projector-rental">Projector Rental</option>
-                    <option value="laptop-rental">Laptop Rental</option>
-                    <option value="computer-rental">Computer Rental</option>
-                    <option value="av-equipment">Audio Visual Equipment</option>
-                    <option value="event-coordination">Event Coordination</option>
-                    <option value="multiple-services">Multiple Services</option>
-                  </select>
-                </div>
-                <div className="form-group">
-                  <textarea name="message" placeholder="Tell us about your event requirements..." rows={5} required></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">Send Message</button>
-                <p className="form-note">Note: This is a demo form. For immediate response, please use WhatsApp or call us directly.</p>
-              </form>
+              <h3>Send us a WhatsApp Message</h3>
+              <div className="whatsapp-contact-card">
+                <p>For immediate response and bookings, please contact us directly via WhatsApp. Our team will respond quickly to your enquiries.</p>
+                <button onClick={handleWhatsAppContact} className="btn btn-primary whatsapp-btn">
+                  <svg className="whatsapp-icon-btn" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488z"/>
+                  </svg>
+                  Contact us on WhatsApp
+                </button>
+                <p className="contact-note">Click the button above to start a WhatsApp conversation with our team for instant support and bookings.</p>
+              </div>
             </div>
           </div>
           <div className="map-container">
@@ -400,9 +377,9 @@ const Index = () => {
           <div className="footer-content">
             <div className="footer-section">
               <div className="footer-logo">
-                <img src="/lovable-uploads/de99f51a-0b2e-46e3-aba8-eac2d14313f6.png" alt="Nellai Digital Hall Logo" className="footer-logo-img" />
+                <img src="/lovable-uploads/eb406ff7-b430-4263-b659-0fcb8150db93.png" alt="Nellai Digital Hall Logo" className="footer-logo-img" />
               </div>
-              <p>Premium digital hall and equipment rental services in Tirunelveli. Your trusted partner for professional events and meetings.</p>
+              <p>Premium digital hall and equipment rental services in Tirunelveli. Your trusted partner for professional conferences, training sessions, and corporate events.</p>
               <div className="social-links">
                 <a href="https://www.facebook.com/nellaidigitalhall" target="_blank" className="social-link" title="Follow us on Facebook">
                   <svg className="social-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -429,43 +406,40 @@ const Index = () => {
               <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#services">Our Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact Us</a></li>
               </ul>
             </div>
             <div className="footer-section">
               <h4>Our Services</h4>
               <ul>
                 <li>Conference Hall Rental</li>
-                <li>Seminar Hall Rental</li>
-                <li>HD & 4K Projector Rental</li>
+                <li>Training & Seminar Halls</li>
+                <li>HD Projector Rental</li>
                 <li>Laptop & Computer Rental</li>
                 <li>Audio Visual Equipment</li>
                 <li>Event Coordination</li>
               </ul>
             </div>
             <div className="footer-section">
-              <h4>Contact Info</h4>
-              <p><strong>Phone:</strong> <a href="tel:+919944222744">+91 99442 22744</a></p>
+              <h4>Contact Information</h4>
+              <p><strong>Phone & WhatsApp:</strong><br /><a href="tel:+919944222744">+91 99442 22744</a></p>
               <p><strong>Address:</strong><br />10K/4, Trivandrum Road<br />Palayamkottai, Tirunelveli - 627 002<br />Tamil Nadu, India</p>
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Nellai Digital Hall. All rights reserved. | Professional Hall & Equipment Rental Services in Tirunelveli</p>
+            <p>&copy; {new Date().getFullYear()} Nellai Digital Hall. All rights reserved. | Professional Conference Hall & Equipment Rental Services in Tirunelveli</p>
           </div>
         </div>
       </footer>
 
       {/* WhatsApp Floating Button */}
-      <a href="https://wa.me/919944222744?text=Hello! I'm interested in your hall and equipment rental services." 
-         className="whatsapp-float" 
-         target="_blank" 
-         title="Chat with us on WhatsApp">
+      <button onClick={handleWhatsAppContact} className="whatsapp-float" title="Chat with us on WhatsApp">
         <svg className="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488z"/>
         </svg>
-      </a>
+      </button>
     </div>
   );
 };
