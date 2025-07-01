@@ -1,13 +1,14 @@
 
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const Index = () => {
   const plugin = useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
   );
 
+  // Hall images first, then event images
   const heroImages = [
     {
       url: "/lovable-uploads/ada55ee4-5db5-445b-890f-5f19e6a7cdb1.png",
@@ -27,8 +28,42 @@ const Index = () => {
     }
   ];
 
+  // WhatsApp enquiry form state
+  const [enquiryForm, setEnquiryForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    eventType: '',
+    date: '',
+    guests: '',
+    message: ''
+  });
+
   const handleWhatsAppContact = () => {
     window.open("https://wa.me/919944222744?text=Hello! I'm interested in your hall and equipment rental services.", "_blank");
+  };
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const message = `Hello! I'm interested in your services.
+    
+Name: ${enquiryForm.name}
+Phone: ${enquiryForm.phone}
+Email: ${enquiryForm.email}
+Event Type: ${enquiryForm.eventType}
+Date: ${enquiryForm.date}
+Number of Guests: ${enquiryForm.guests}
+Message: ${enquiryForm.message}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/919944222744?text=${encodedMessage}`, "_blank");
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setEnquiryForm({
+      ...enquiryForm,
+      [e.target.name]: e.target.value
+    });
   };
 
   return (
@@ -189,7 +224,7 @@ const Index = () => {
             <div className="services-grid">
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="/lovable-uploads/1e6b4475-9175-4b47-9902-e7f365f3f870.png" alt="Projector and Audio Equipment Rental" />
+                  <img src="/lovable-uploads/1e6b4475-9175-4b47-9902-e7f365f3f870.png" alt="Audio Visual Equipment Rental" />
                 </div>
                 <h4>HD Projectors & Screens</h4>
                 <p>High-definition projectors with crystal-clear display for professional presentations and training sessions.</p>
@@ -248,7 +283,7 @@ const Index = () => {
               </div>
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Furniture and Seating Arrangements" />
+                  <img src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Furniture and Seating Arrangements" />
                 </div>
                 <h4>Furniture & Seating</h4>
                 <p>Premium seating arrangements and furniture to complement your event setup and enhance participant comfort.</p>
@@ -261,7 +296,7 @@ const Index = () => {
               </div>
               <div className="service-card">
                 <div className="service-icon">
-                  <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Catering and Refreshment Services" />
+                  <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Catering and Refreshment Services" />
                 </div>
                 <h4>Refreshment Services</h4>
                 <p>Professional catering and refreshment arrangements to keep your participants energized throughout the event.</p>
@@ -342,17 +377,89 @@ const Index = () => {
               </div>
             </div>
             <div className="contact-form">
-              <h3>Send us a WhatsApp Message</h3>
-              <div className="whatsapp-contact-card">
-                <p>For immediate response and bookings, please contact us directly via WhatsApp. Our team will respond quickly to your enquiries.</p>
-                <button onClick={handleWhatsAppContact} className="btn btn-primary whatsapp-btn">
+              <h3>Send us an Enquiry</h3>
+              <form onSubmit={handleFormSubmit} className="enquiry-form">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name *"
+                    value={enquiryForm.name}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number *"
+                    value={enquiryForm.phone}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    value={enquiryForm.email}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <select
+                    name="eventType"
+                    value={enquiryForm.eventType}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="">Select Event Type *</option>
+                    <option value="Conference">Conference</option>
+                    <option value="Training">Training Session</option>
+                    <option value="Seminar">Seminar</option>
+                    <option value="Meeting">Business Meeting</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <input
+                    type="date"
+                    name="date"
+                    value={enquiryForm.date}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="number"
+                    name="guests"
+                    placeholder="Number of Guests"
+                    value={enquiryForm.guests}
+                    onChange={handleInputChange}
+                    min="1"
+                  />
+                </div>
+                <div className="form-group">
+                  <textarea
+                    name="message"
+                    placeholder="Additional Requirements or Message"
+                    value={enquiryForm.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                  ></textarea>
+                </div>
+                <button type="submit" className="btn btn-primary whatsapp-btn">
                   <svg className="whatsapp-icon-btn" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488z"/>
                   </svg>
-                  Contact us on WhatsApp
+                  Send WhatsApp Message
                 </button>
-                <p className="contact-note">Click the button above to start a WhatsApp conversation with our team for instant support and bookings.</p>
-              </div>
+                <p className="form-note">Your enquiry will be sent directly to our WhatsApp for quick response.</p>
+              </form>
             </div>
           </div>
           <div className="map-container">
@@ -381,17 +488,17 @@ const Index = () => {
               </div>
               <p>Premium digital hall and equipment rental services in Tirunelveli. Your trusted partner for professional conferences, training sessions, and corporate events.</p>
               <div className="social-links">
-                <a href="https://www.facebook.com/nellaidigitalhall" target="_blank" className="social-link" title="Follow us on Facebook">
+                <a href="https://www.facebook.com/nellaidigitalhall" target="_blank" className="social-link facebook" title="Follow us on Facebook">
                   <svg className="social-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/nellaidigitalhall" target="_blank" className="social-link" title="Follow us on Instagram">
+                <a href="https://www.instagram.com/nellaidigitalhall" target="_blank" className="social-link instagram" title="Follow us on Instagram">
                   <svg className="social-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
                 </a>
-                <a href="https://g.page/nellaidigitalhall" target="_blank" className="social-link" title="Find us on Google">
+                <a href="https://g.page/nellaidigitalhall" target="_blank" className="social-link google" title="Find us on Google">
                   <svg className="social-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                     <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
